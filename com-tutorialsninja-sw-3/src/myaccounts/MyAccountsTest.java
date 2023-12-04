@@ -67,7 +67,7 @@ public class MyAccountsTest extends BaseTest {
         lastName.sendKeys("Patel");
 
         WebElement email = driver.findElement(By.xpath("//div[@id='account-register']/div[1]/div[1]/form/fieldset[1]/div[4]/div[1]/input[1]"));
-        email.sendKeys("m4mitzcodebuster500000@gmail.com");
+        email.sendKeys("m4mitzcodebuster5000000@gmail.com");
 
         WebElement telephone = driver.findElement(By.xpath("//div[@id='account-register']/div[1]/div[1]/form/fieldset[1]/div[5]/div[1]/input[1]"));
         telephone.sendKeys("0123456789");
@@ -121,7 +121,7 @@ public class MyAccountsTest extends BaseTest {
         selectMenu("//nav[@id='top']/div[1]/div[2]/ul/li[2]/ul[1]/li[2]/a");
 
         WebElement email = driver.findElement(By.xpath("//div[@id='account-login']/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[1]/input[1]"));
-        email.sendKeys("m4mitzcodebuster500000@gmail.com");
+        email.sendKeys("m4mitzcodebuster1111@gmail.com");
 
         WebElement password = driver.findElement(By.xpath("//div[@id='account-login']/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[2]/input[1]"));
         password.sendKeys("Codebuster@1234");
