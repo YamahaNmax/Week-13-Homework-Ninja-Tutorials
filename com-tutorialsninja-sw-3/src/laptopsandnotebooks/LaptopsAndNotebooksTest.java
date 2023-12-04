@@ -119,8 +119,66 @@ public class LaptopsAndNotebooksTest extends BaseTest {
         WebElement continueButton = driver.findElement(By.xpath("//div[@id='checkout-checkout']/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/input"));
         continueButton.click();
 
+        Thread.sleep(1000);
 
+        WebElement firstName = driver.findElement(By.xpath("//div[@id='content']/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/fieldset/div[2]/input"));
+        firstName.sendKeys("Miten");
 
+        WebElement lastName = driver.findElement(By.xpath("//div[@id='content']/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/fieldset/div[3]/input"));
+        lastName.sendKeys("Patel");
+
+        WebElement email = driver.findElement(By.xpath("//div[@id='content']/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/fieldset/div[4]/input"));
+        email.sendKeys("m4mitzcodebuster@gmail.com");
+
+        WebElement telephone = driver.findElement(By.xpath("//div[@id='content']/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/fieldset/div[5]/input"));
+        telephone.sendKeys("0123456789");
+
+        WebElement company = driver.findElement(By.xpath("//div[@id='content']/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/fieldset/div[1]/input"));
+        company.sendKeys("Codebuster");
+
+        WebElement address1 = driver.findElement(By.xpath("//div[@id='content']/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/fieldset/div[2]/input"));
+        address1.sendKeys("3, Stan Stat");
+
+        WebElement address2 = driver.findElement(By.xpath("//div[@id='content']/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/fieldset/div[3]/input"));
+        address2.sendKeys("london Road");
+
+        WebElement city = driver.findElement(By.xpath("//div[@id='content']/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/fieldset/div[4]/input"));
+        city.sendKeys("Stan");
+
+        WebElement postCode = driver.findElement(By.xpath("//div[@id='content']/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/fieldset/div[5]/input"));
+        postCode.sendKeys("HA7 4PD");
+
+        WebElement country = driver.findElement(By.xpath("//div[@id='content']/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/fieldset/div[6]/select"));
+        Select select1 = new Select(country);
+        select1.selectByVisibleText("United Kingdom");
+
+        WebElement regionState = driver.findElement(By.xpath("//div[@id='content']/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/fieldset/div[7]/select"));
+        Select select2 = new Select(regionState);
+        select2.selectByVisibleText("Greater London");
+
+        WebElement continueButton1 = driver.findElement(By.xpath("//div[@id='content']/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/input"));
+        continueButton1.click();
+
+        Thread.sleep(1000);
+
+        String actualText8 = driver.findElement(By.xpath("//div[@id='content']/div[1]/div[3]/div[2]/div[1]/div[1]")).getText();
+        String expectedText8 = "Warning: No Payment options are available. Please contact us for assistance!";
+        Assert.assertEquals(actualText8, expectedText8);
+
+        WebElement comment = driver.findElement(By.xpath("//div[@id='content']/div[1]/div[3]/div[2]/div[1]/p[2]/textarea"));
+        comment.sendKeys("Please, Deliver ASAP. Thank you.!");
+
+        WebElement termsAndCondition = driver.findElement(By.xpath("//div[@id='content']/div[1]/div[3]/div[2]/div[1]/div[2]/div[1]/input[1]"));
+        termsAndCondition.click();
+
+        WebElement continueButton2 = driver.findElement(By.xpath("//div[@id='content']/div[1]/div[3]/div[2]/div[1]/div[2]/div[1]/input[2]"));
+        continueButton2.click();
+
+        Thread.sleep(1000);
+
+        String actualText9 = driver.findElement(By.xpath("//div[@id='content']/div[1]/div[3]/div[2]/div[1]/div[1]")).getText();
+        String expectedText9 = "Warning: Payment method required!\n" + "×";
+        Assert.assertEquals(actualText9, expectedText9);
 
     }
 
