@@ -152,7 +152,7 @@ public class MyAccountsTest extends BaseTest {
 
     @After
     public void endTest() {
-        //closeBrowser();
+        closeBrowser();
     }
 
 }
