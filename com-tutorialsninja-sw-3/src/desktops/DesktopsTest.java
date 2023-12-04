@@ -25,7 +25,7 @@ public class DesktopsTest extends BaseTest {
     }
 
     @Test
-    public void verifyProductArrangeInAlphabeticalOrder() throws InterruptedException {
+    public void verifyProductArrangeInAlphabeticalOrder() {
 
         WebElement textDesktop = driver.findElement(By.xpath("//ul[@class='nav navbar-nav']/li[1]/a"));
         textDesktop.click();
@@ -37,8 +37,6 @@ public class DesktopsTest extends BaseTest {
 
         Select select = new Select(sortByPosition);
         select.selectByIndex(2);
-
-        Thread.sleep(5000);
 
     }
 
