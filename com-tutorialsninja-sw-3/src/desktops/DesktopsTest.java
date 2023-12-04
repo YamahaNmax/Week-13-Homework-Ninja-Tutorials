@@ -74,11 +74,13 @@ public class DesktopsTest extends BaseTest {
         WebElement addToCartButton = driver.findElement(By.id("button-cart"));
         addToCartButton.click();
 
-//        String actualText1 = driver.findElement(By.xpath("//div[@id='product-product']/div[1]")).getText();
-//        String expectedText1 = "Success: You have added HP LP3065 to your shopping cart!\n" +
-//                "×";
-//        System.out.println(actualText1);
-//        Assert.assertEquals(actualText1, expectedText1);
+        Thread.sleep(1000);
+
+        String actualText1 = driver.findElement(By.xpath("//div[@class='alert alert-success alert-dismissible']")).getText();
+        String expectedText1 = "Success: You have added HP LP3065 to your shopping cart!\n" +
+                "×";
+        System.out.println(actualText1);
+        Assert.assertEquals(actualText1, expectedText1);
 
         Thread.sleep(1000);
 
