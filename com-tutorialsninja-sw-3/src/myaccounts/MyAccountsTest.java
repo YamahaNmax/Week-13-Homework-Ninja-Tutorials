@@ -12,8 +12,8 @@ public class MyAccountsTest extends BaseTest {
 
     String baseUrl = "http://tutorialsninja.com/demo/index.php?";
 
-    public void selectMenu(String menu) {
-        WebElement menuLink = driver.findElement(By.xpath(menu));
+    public void selectMyAccountOptions(String option) {
+        WebElement menuLink = driver.findElement(By.linkText(option));
         menuLink.click();
 
     }
@@ -30,7 +30,7 @@ public class MyAccountsTest extends BaseTest {
         WebElement myAccount = driver.findElement(By.xpath("//nav[@id='top']/div[1]/div[2]/ul/li[2]"));
         myAccount.click();
 
-        selectMenu("//nav[@id='top']/div[1]/div[2]/ul/li[2]/ul[1]/li[1]/a");
+        selectMyAccountOptions("Register");
 
         String actualText = driver.findElement(By.xpath("//div[@id='account-register']/div[1]/div[1]/h1")).getText();
         String expectedText = "Register Account";
@@ -44,7 +44,7 @@ public class MyAccountsTest extends BaseTest {
         WebElement myAccount = driver.findElement(By.xpath("//nav[@id='top']/div[1]/div[2]/ul/li[2]"));
         myAccount.click();
 
-        selectMenu("//nav[@id='top']/div[1]/div[2]/ul/li[2]/ul[1]/li[2]/a");
+        selectMyAccountOptions("Login");
 
         String actualText = driver.findElement(By.xpath("//div[@id='account-login']/div[1]/div[1]/div[1]/div[2]/div[1]/h2")).getText();
         String expectedText = "Returning Customer";
@@ -58,7 +58,7 @@ public class MyAccountsTest extends BaseTest {
         WebElement myAccount = driver.findElement(By.xpath("//nav[@id='top']/div[1]/div[2]/ul/li[2]"));
         myAccount.click();
 
-        selectMenu("//nav[@id='top']/div[1]/div[2]/ul/li[2]/ul[1]/li[1]/a");
+        selectMyAccountOptions("Register");
 
         WebElement firstName = driver.findElement(By.xpath("//div[@id='account-register']/div[1]/div[1]/form/fieldset[1]/div[2]/div[1]/input[1]"));
         firstName.sendKeys("Miten");
@@ -67,7 +67,7 @@ public class MyAccountsTest extends BaseTest {
         lastName.sendKeys("Patel");
 
         WebElement email = driver.findElement(By.xpath("//div[@id='account-register']/div[1]/div[1]/form/fieldset[1]/div[4]/div[1]/input[1]"));
-        email.sendKeys("m4mitzcodebuster5000000@gmail.com");
+        email.sendKeys("m4mitzcodebuster50000000@gmail.com");
 
         WebElement telephone = driver.findElement(By.xpath("//div[@id='account-register']/div[1]/div[1]/form/fieldset[1]/div[5]/div[1]/input[1]"));
         telephone.sendKeys("0123456789");
@@ -99,7 +99,7 @@ public class MyAccountsTest extends BaseTest {
         WebElement myLoggedInAccount = driver.findElement(By.xpath("//nav[@id='top']/div[1]/div[2]/ul/li[2]"));
         myLoggedInAccount.click();
 
-        selectMenu("//nav[@id='top']/div[1]/div[2]/ul/li[2]/ul[1]/li[5]/a");
+        selectMyAccountOptions("Logout");
 
         Thread.sleep(1000);
 
@@ -118,10 +118,10 @@ public class MyAccountsTest extends BaseTest {
         WebElement myAccount = driver.findElement(By.xpath("//nav[@id='top']/div[1]/div[2]/ul/li[2]"));
         myAccount.click();
 
-        selectMenu("//nav[@id='top']/div[1]/div[2]/ul/li[2]/ul[1]/li[2]/a");
+        selectMyAccountOptions("Login");
 
         WebElement email = driver.findElement(By.xpath("//div[@id='account-login']/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[1]/input[1]"));
-        email.sendKeys("m4mitzcodebuster1111@gmail.com");
+        email.sendKeys("m4mitzcodebuster50000000@gmail.com");
 
         WebElement password = driver.findElement(By.xpath("//div[@id='account-login']/div[1]/div[1]/div[1]/div[2]/div[1]/form[1]/div[2]/input[1]"));
         password.sendKeys("Codebuster@1234");
@@ -136,7 +136,7 @@ public class MyAccountsTest extends BaseTest {
         WebElement myLoggedInAccount = driver.findElement(By.xpath("//nav[@id='top']/div[1]/div[2]/ul/li[2]"));
         myLoggedInAccount.click();
 
-        selectMenu("//nav[@id='top']/div[1]/div[2]/ul/li[2]/ul[1]/li[5]/a");
+        selectMyAccountOptions("Logout");
 
         Thread.sleep(1000);
 
